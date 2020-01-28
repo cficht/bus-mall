@@ -18,10 +18,8 @@ let favoriteArray = new Array(20).fill(0);
 
 for (let i = 0; i < radioButtonArray.length; i++){
     radioButtonArray[i].addEventListener('click', (e) => {
-        // console.log(e.target.value);
         const currentFavorite = e.target.value;
         favoriteArray[currentFavorite] += 1;
-        // console.log(favoriteArray);
         newChoices();
         
     });
@@ -33,12 +31,9 @@ function newChoices() {
     const randomProductOutput = newProductArray.randomProduct3();
     
     for (let i = 0; i < 3; i++) {
-        // const randomProductOutput = newProductArray.randomProduct();
         imageArray[i].src = randomProductOutput[i].image;
         choiceArray[i].value = randomProductOutput[i].id;
         currentOptions[i] = randomProductOutput[i];
-        //newProductArray.removeProduct(randomProductOutput[i]);
-        // console.log(randomProductOutput);
     }
 
     for (let i = 0; i < 3; i++) {
@@ -47,7 +42,6 @@ function newChoices() {
             previousOptions = [];
         }
         previousOptions.push(currentOptions[i]);
-        // console.log(previousOptions);
     }  
 }
 

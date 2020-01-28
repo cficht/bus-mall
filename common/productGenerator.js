@@ -35,7 +35,6 @@ export class ProductGeneration {
     restore3Product(usedProducts) {
             for (let i = 0; i < 6; i++) {
                 this.products.push(usedProducts[i]);
-                console.log(this.products);
             }
     }
 }
