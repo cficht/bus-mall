@@ -15,13 +15,20 @@ const radioButtonArray = document.querySelectorAll('input');
 let currentOptions = [];
 let previousOptions = [];
 let favoriteArray = new Array(20).fill(0);
+let displayArray = new Array(20).fill(0);
+let numberOfClicks = 0;
+
+newChoices();
 
 for (let i = 0; i < radioButtonArray.length; i++){
     radioButtonArray[i].addEventListener('click', (e) => {
         const currentFavorite = e.target.value;
         favoriteArray[currentFavorite] += 1;
+        numberOfClicks++;
+        if (numberOfClicks >= 25) {
+            hit25();
+        }
         newChoices();
-        
     });
 
 }
@@ -34,7 +41,8 @@ function newChoices() {
         imageArray[i].src = randomProductOutput[i].image;
         choiceArray[i].value = randomProductOutput[i].id;
         currentOptions[i] = randomProductOutput[i];
-    }
+        displayArray[randomProductOutput[i].id] += 1;
+    }  
 
     for (let i = 0; i < 3; i++) {
         if (previousOptions.length >= 6) {
@@ -45,4 +53,22 @@ function newChoices() {
     }  
 }
 
-newChoices();
+function hit25() {
+    for (let i = 0; i < 3; i++) {
+        imageArray[i].style.visibility = 'hidden';
+    }
+
+    const favoriteList = document.getElementById('favorite-list');
+
+    for (let i = 0; i < favoriteArray.length; i++) {
+        const favorite = document.createElement('li');
+        favoriteList.appendChild(favorite);
+        const faveText = document.createElement('span');
+        console.log(favoriteList[i]);
+        faveText.textContent = favoriteList[i];
+        favorite.appendChild(faveText);
+        
+    }
+
+}
+

@@ -12,3 +12,11 @@ ul {
     height: 200px;
     width: 200px;
 }
+
+input {
+    visibility: hidden;
+}
+
+header {
+    text-align: center;
+}
