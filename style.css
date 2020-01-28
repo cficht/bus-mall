@@ -1,0 +1,14 @@
+#product-container {
+    border: 1px solid black;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.product-image {
+    height: 200px;
+    width: 200px;
+}

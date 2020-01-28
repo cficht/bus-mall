@@ -5,7 +5,7 @@
 **1) Make products.js**
 
 **2) Make static HTML page:**
-- div
+- article
 - ul
 - li x 3 (Image, Radio Button)
 - image
@@ -22,6 +22,8 @@
 - function to not repeat images
 
 **4) Results page?**
+
+**5) Style pages**
 
 # 
 
