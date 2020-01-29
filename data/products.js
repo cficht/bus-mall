@@ -1,119 +1,119 @@
 const bag = {
-    name: 'bag',
+    name: 'Bag',
     image: '../assets/bag.jpg',
     id: 0
 };
 
 const banana = {
-    name: 'banana',
+    name: 'Banana',
     image: '../assets/banana.jpg',
     id: 1
 };
 
 const bathroom = {
-    name: 'bathroom',
+    name: 'Bathroom',
     image: '../assets/bathroom.jpg',
     id: 2
 };
 
 const boots = {
-    name: 'boots',
+    name: 'Boots',
     image: '../assets/boots.jpg',
     id: 3
 };
 
 const breakfast = {
-    name: 'breakfast',
+    name: 'Breakfast',
     image: '../assets/breakfast.jpg',
     id: 4
 };
 
 const bubblegum = {
-    name: 'bubblegum',
+    name: 'Bubblegum',
     image: '../assets/bubblegum.jpg',
     id: 5
 };
 
 const chair = {
-    name: 'chair',
+    name: 'Chair',
     image: '../assets/chair.jpg',
     id: 6
 };
 
 const cthulhu = {
-    name: 'cthulhu',
+    name: 'Cthulhu',
     image: '../assets/cthulhu.jpg',
     id: 7
 };
 
 const dogduck = {
-    name: 'dogduck',
+    name: 'Dog-duck',
     image: '../assets/dogduck.jpg',
     id: 8
 };
 
 const dragon = {
-    name: 'dragon',
+    name: 'Dragon',
     image: '../assets/dragon.jpg',
     id: 9
 };
 
 const pen = {
-    name: 'pen',
+    name: 'Pen',
     image: '../assets/pen.jpg',
     id: 10
 };
 
 const petsweep = {
-    name: 'petsweep',
+    name: 'Pet-sweep',
     image: '../assets/petsweep.jpg',
     id: 11
 };
 
 const scissors = {
-    name: 'scissors',
+    name: 'Scissors',
     image: '../assets/scissors.jpg',
     id: 12
 };
 
 const shark = {
-    name: 'shark',
+    name: 'Shark',
     image: '../assets/shark.jpg',
     id: 13
 };
 
 const sweep = {
-    name: 'sweep',
+    name: 'Sweep',
     image: '../assets/sweep.png',
     id: 14
 };
 
 const tauntaun = {
-    name: 'tauntaun',
+    name: 'Tauntaun',
     image: '../assets/tauntaun.jpg',
     id: 15
 };
 
 const unicorn = {
-    name: 'unicorn',
+    name: 'Unicorn',
     image: '../assets/unicorn.jpg',
     id: 16
 };
 
 const usb = {
-    name: 'usb',
+    name: 'Usb',
     image: '../assets/usb.gif',
     id: 17
 };
 
 const watercan = {
-    name: 'watercan',
+    name: 'Watercan',
     image: '../assets/watercan.jpg',
     id: 18
 };
 
 const wineglass = {
-    name: 'wineglass',
+    name: 'Wineglass',
     image: '../assets/wineglass.jpg',
     id: 19
 };

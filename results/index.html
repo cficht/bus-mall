@@ -5,23 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="common/style.css">
+    <link rel="stylesheet" href="../common/style.css">
     <title>Document</title>
 </head>
 
 <body>
     <main>
         <header>
-            <h1>Bus Mall</h1>
+            <h1>Results</h1>
         </header>
-
-        <article id="product-container">
-            <ul id="choice-list">
-                <li><label><input type="radio" name="choice" id="choice-1"><img src="../assets/bag.jpg" class="product-image" id="choice-1-image" /></label></li>
-                <li><label><input type="radio" name="choice" id="choice-2"><img src="../assets/banana.jpg" class="product-image" id="choice-2-image" /></label></li>
-                <li><label><input type="radio" name="choice" id="choice-3"><img src="../assets/bathroom.jpg" class="product-image" id="choice-3-image" /></label></li>
-            </ul>
-        </article>
 
         <article id="results-container">
             <div>
@@ -34,10 +26,20 @@
                 <ul id="displayed-list">
                 </ul>
             </div>
+            <div>
+                <h3>All Clicked:</h3>
+                <ul id="all-clicked">
+                </ul>
+            </div>
+            <div>
+                <h3>All Shown:</h3>
+                <ul id="all-shown">
+                </ul>
+            </div>
         </article>
 
         <article id="button-container">
-            <button id="results-button">Check Results</button>
+            <button id="retry-button">Try Again</button>
         </article>
 
     </main>

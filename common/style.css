@@ -2,7 +2,17 @@
     border: 1px solid black;
 }
 
-ul {
+#results-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#button-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#choice-list {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
