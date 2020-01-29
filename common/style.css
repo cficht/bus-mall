@@ -19,7 +19,6 @@ header {
 }
 
 #instructions {
-    /* position: absolute; */
     font-family: 'Kaushan Script', cursive;
     text-align: center;
     margin-top: 40px;
@@ -38,7 +37,6 @@ header {
     font-size: 55px;
     position: relative;
     top: -15px;
-    /* text-shadow: 2px 2px 4px #000000; */
 }
 
 #bus-logo {
@@ -69,7 +67,6 @@ body {
     box-shadow: 10px 10px 8px #888888;
     margin-top: 50px;
     width: 1020px;
-    /* margin: 0 auto; */
 }
 
 #results-container {
@@ -81,8 +78,6 @@ body {
     box-shadow: 10px 10px 8px #888888;
     margin-top: 50px;
     width: 1020px;
-    /* display: flex; */
-    /* justify-content: space-evenly; */
 }
 
 #results-switch {
@@ -94,6 +89,11 @@ body {
 #type-stats {
     display: flex;
     justify-content: space-evenly;
+}
+
+.stats-container {
+    margin: 0 auto;
+    text-align: left;
 }
 
 #type-chart {
@@ -143,6 +143,8 @@ input {
 
 ul {
     margin-bottom: 30px;
+    text-align: left;
+    padding-inline-start: 0px;
 }
 
 h3 {

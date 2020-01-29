@@ -37,7 +37,6 @@ export function getCurrentClicks() {
     if (!storedCurrentClicks) {
         storedCurrentClicks = Array(20).fill(0);
     }
-
     return storedCurrentClicks;
 }
 
@@ -47,7 +46,6 @@ export function getCurrentViews() {
     if (!storedCurrentViews) {
         storedCurrentViews = Array(20).fill(0);
     }
-
     return storedCurrentViews;
 }
 
@@ -57,7 +55,6 @@ export function getAllClicks() {
     if (!storedAllClicks) {
         storedAllClicks = Array(20).fill(0);
     }
-    
     return storedAllClicks;
 }
 
@@ -67,11 +64,8 @@ export function getAllViews() {
     if (!storedAllViews) {
         storedAllViews = Array(20).fill(0);
     }
-
     return storedAllViews;
 }
-
-
 
 export function resetCurrentSession() {
     localStorage.removeItem('current-session-clicks');

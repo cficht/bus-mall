@@ -66,7 +66,6 @@ function hit25() {
     productContainer.style.display = 'none';
     resultsContainer.style.display = 'inherit';
     resultsButton.style.display = 'flex';
-    // resultsContainer.style.visibility = ;
 
     const chartButton = document.getElementById('chart-switch');
     const statsButton = document.getElementById('stat-switch');
