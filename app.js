@@ -15,11 +15,12 @@ const radioButtonArray = document.querySelectorAll('input');
 const resultsContainer = document.getElementById('results-container');
 const productContainer = document.getElementById('product-container');
 const resultsButton = document.getElementById('results-button');
+const instructionsDiv = document.getElementById('instructions');
 
 let currentOptions = [];
 let previousOptions = [];
-resultsContainer.style.visibility = 'hidden';
-resultsButton.style.visibility = 'hidden';
+resultsContainer.style.display = 'none';
+resultsButton.style.display = 'none';
 
 let numberOfClicks = 0;
 let favoriteArray = new Array(20).fill(0);
@@ -61,8 +62,11 @@ function newChoices() {
 }
 
 function hit25() {
+    instructionsDiv.style.display = 'none';
     productContainer.style.display = 'none';
-    resultsContainer.style.visibility = 'visible';
+    resultsContainer.style.display = 'inherit';
+    resultsButton.style.display = 'flex';
+    // resultsContainer.style.visibility = ;
 
     const chartButton = document.getElementById('chart-switch');
     const statsButton = document.getElementById('stat-switch');
@@ -99,6 +103,48 @@ function hit25() {
         ratio.textContent = products[i].name + ': ' + ratioArray[i] + '%';
         ratioList.appendChild(ratio);
     }
+
+    const ctx = document.getElementById('chart').getContext('2d');
+
+    const label = 'Current Clicks';
+    const data = favoriteArray;
+    const labelColors = 'red';
+
+    const label2 = 'Current Views';
+    const data2 = displayArray;
+    const labelColors2 = 'blue';
+
+    const productNames = [];
+    for (let i = 0; i < products.length; i++) {
+        productNames.push(products[i].name);
+    }    
+
+    // eslint-disable-next-line no-unused-vars
+    const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: productNames,
+            datasets: [{
+                label: label,
+                data: data,
+                backgroundColor: labelColors
+            }, {
+                label: label2,
+                data: data2,
+                backgroundColor: labelColors2
+            }]
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    stacked: true
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
+            }
+        }
+    });
 
     setCurrentSession(favoriteArray, displayArray);
     setAllSession(favoriteArray, displayArray);

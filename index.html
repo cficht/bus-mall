@@ -31,38 +31,40 @@
             </ul>
         </article>
 
+        <div id="instructions">
+            <p>What do you find to be most appealing?</p>
+        </div>
+
         <article id="results-container">
             <div id="results-switch">
                 <button id="chart-switch">Chart</button>
                 <button id="stat-switch">Stats</button>
             </div>
             <div id="type-chart">
-                <h1>CHART</h1>
+                <canvas id="chart"></canvas>
             </div>
             <div id="type-stats">
                 <div>
-                    <h3>Times Clicked:</h3>
-                    <ul id="favorite-list">
+                    <ul id="favorite-list"><h3>Times Clicked:</h3>
                     </ul>
                 </div>
                 <div>
-                    <h3>Times Shown:</h3>
-                    <ul id="displayed-list">
+                    <ul id="displayed-list"><h3>Times Shown:</h3>
                     </ul>
                 </div>
                 <div>
-                    <h3>Ratio:</h3>
-                    <ul id="ratio-list">
+                    <ul id="ratio-list"><h3>Ratio:</h3>
                     </ul>
                 </div>
             </div>
         </article>
 
         <article id="button-container">
-            <button id="results-button">Check Results</button>
+            <button id="results-button">All-Time Results</button>
         </article>
 
     </main>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
     <script type="module" src="app.js"></script>
 </body>
 

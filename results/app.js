@@ -1,11 +1,9 @@
 import { products } from '../data/products.js';
-import { getCurrentClicks, getCurrentViews, getAllClicks, getAllViews } from '../common/storage.js';
+import { getAllClicks, getAllViews } from '../common/storage.js';
 
 const resultsContainer = document.getElementById('results-container');
 const retryButton = document.getElementById('retry-button');
 
-const currentClicksToDisplay = getCurrentClicks();
-const currentViewsToDisplay = getCurrentViews();
 const allClicksToDisplay = getAllClicks();
 const allViewsToDisplay = getAllViews();
 
@@ -46,6 +44,48 @@ function resultsPage() {
         allRatio.textContent = products[i].name + ': ' + allRatioArray[i] + '%';
         allRatioUl.appendChild(allRatio);
     }
+
+    const ctx = document.getElementById('chart').getContext('2d');
+
+    const label = 'All-Time Clicked';
+    const data = allClicksToDisplay;
+    const labelColors = 'red';
+
+    const label2 = 'All-Time Views';
+    const data2 = allViewsToDisplay;
+    const labelColors2 = 'blue';
+
+    const productNames = [];
+    for (let i = 0; i < products.length; i++) {
+        productNames.push(products[i].name);
+    }    
+
+    // eslint-disable-next-line no-unused-vars
+    const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: productNames,
+            datasets: [{
+                label: label,
+                data: data,
+                backgroundColor: labelColors
+            }, {
+                label: label2,
+                data: data2,
+                backgroundColor: labelColors2
+            }]
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    stacked: true
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
+            }
+        }
+    });
 
     chartButton.addEventListener('click', () => {
         typeStats.style.display = 'none';
