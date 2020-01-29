@@ -1,8 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    position: absolute;
+    height: 120px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bus-text {
+    font-family: 'Anton', sans-serif;
+    font-size: 55px;
+    position: relative;
+    top: -15px;
+    /* text-shadow: 2px 2px 4px #000000; */
+}
+
+#bus-logo {
+    height: 100px;
+    margin-left: 20px;
+    position: relative;
+    top: -15px;
+}
+
+#subtitle {
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    color: white;
+    margin-top: 75px;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
 #product-container {
-    border: 1px solid black;
+    border-top: 20px solid darkgray;
+    border-right: 2px solid darkgray;
+    border-left: 2px solid darkgray;
+    border-bottom: 20px solid darkgray;
+    border-radius: 15px;
+    box-shadow: 10px 10px 8px #888888;
+    margin-top: 50px;
+    width: 980px;
+    /* margin: 0 auto; */
 }
 
 #results-container {
+    border-top: 20px solid darkgray;
+    border-right: 2px solid darkgray;
+    border-left: 2px solid darkgray;
+    border-bottom: 20px solid darkgray;
+    border-radius: 15px;
+    box-shadow: 10px 10px 8px #888888;
+    margin-top: 50px;
+    width: 980px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -12,19 +81,26 @@
     justify-content: space-evenly;
 }
 
+button {
+    margin: 30px;
+    background-color: red;
+    color: white;
+}
+
 #choice-list {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
+    padding-inline-start: 0px;
 }
 
 .product-image {
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
 }
 
 input {
-    visibility: hidden;
+    display: none;
 }
 
 header {

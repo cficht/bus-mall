@@ -13,6 +13,7 @@ const choiceArray = [choice1, choice2, choice3];
 const imageArray = [choice1Image, choice2Image, choice3Image];
 const radioButtonArray = document.querySelectorAll('input');
 const resultsContainer = document.getElementById('results-container');
+const productContainer = document.getElementById('product-container');
 const resultsButton = document.getElementById('results-button');
 
 let currentOptions = [];
@@ -59,6 +60,7 @@ function newChoices() {
 }
 
 function hit25() {
+    productContainer.style.display = 'none';
     resultsContainer.style.visibility = 'visible';
 
     for (let i = 0; i < 3; i++) {
