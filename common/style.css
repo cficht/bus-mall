@@ -72,8 +72,23 @@ body {
     box-shadow: 10px 10px 8px #888888;
     margin-top: 50px;
     width: 980px;
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+}
+
+#results-switch {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+#type-stats {
+    display: flex;
+    justify-content: center;
+}
+
+#type-chart {
+    display: flex;
+    justify-content: center;
 }
 
 #button-container {
@@ -82,9 +97,11 @@ body {
 }
 
 button {
-    margin: 30px;
+    margin: 15px;
     background-color: red;
     color: white;
+    height: 30px;
+    width: 100px;
 }
 
 #choice-list {
@@ -101,6 +118,10 @@ button {
 
 input {
     display: none;
+}
+
+ul {
+    margin-bottom: 30px;
 }
 
 header {

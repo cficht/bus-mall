@@ -24,6 +24,7 @@ resultsButton.style.visibility = 'hidden';
 let numberOfClicks = 0;
 let favoriteArray = new Array(20).fill(0);
 let displayArray = new Array(20).fill(0);
+let ratioArray = new Array(20).fill(0);
 
 resetCurrentSession();
 newChoices();
@@ -63,12 +64,23 @@ function hit25() {
     productContainer.style.display = 'none';
     resultsContainer.style.visibility = 'visible';
 
+    const chartButton = document.getElementById('chart-switch');
+    const statsButton = document.getElementById('stat-switch');
+    const typeStats = document.getElementById('type-stats');
+    const typeChart = document.getElementById('type-chart');
+    typeStats.style.display = 'none';
+
     for (let i = 0; i < 3; i++) {
         imageArray[i].style.visibility = 'hidden';
     }
 
+    for (let i = 0; i < ratioArray.length; i++) {
+        ratioArray[i] = (favoriteArray[i] / displayArray[i]).toFixed(2);
+    }
+
     const favoriteList = document.getElementById('favorite-list');
     const displayedList = document.getElementById('displayed-list');
+    const ratioList = document.getElementById('ratio-list');
 
     for (let i = 0; i < favoriteArray.length; i++) {
         const favorite = document.createElement('li');
@@ -82,10 +94,26 @@ function hit25() {
         displayedList.appendChild(display);
     }
 
+    for (let i = 0; i < ratioArray.length; i++) {
+        const ratio = document.createElement('li');
+        ratio.textContent = products[i].name + ': ' + ratioArray[i] + '%';
+        ratioList.appendChild(ratio);
+    }
+
     setCurrentSession(favoriteArray, displayArray);
     setAllSession(favoriteArray, displayArray);
 
     resultsButton.style.visibility = 'visible';
+
+    chartButton.addEventListener('click', () => {
+        typeStats.style.display = 'none';
+        typeChart.style.display = 'flex';
+    });
+
+    statsButton.addEventListener('click', () => {
+        typeChart.style.display = 'none';
+        typeStats.style.display = 'flex';
+    });
 }
 
 resultsButton.addEventListener('click', () => {
